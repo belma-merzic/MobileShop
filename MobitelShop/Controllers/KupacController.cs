@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MobitelShop.Data;
@@ -9,7 +10,9 @@ namespace MobitelShop.Controllers
 {
   [Route("[controller]/[action]")]
   [ApiController]
-  public class KupacController : ControllerBase
+    [Authorize]
+
+    public class KupacController : ControllerBase
   {
     private readonly MojDbContext _dbContext;
     public KupacController(MojDbContext dbContext)

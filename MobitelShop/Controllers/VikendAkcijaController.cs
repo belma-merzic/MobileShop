@@ -7,11 +7,14 @@ using MobitelShop.Models;
 using MobitelShop.ViewModels;
 using System.Security.Claims;
 using System.Runtime.InteropServices;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MobitelShop.Controllers
 {
     [ApiController]
     [Route("[controller]/[action]")]
+    [Authorize]
+
     public class VikendAkcijaController:ControllerBase
     {
         private readonly MojDbContext _dbContext;

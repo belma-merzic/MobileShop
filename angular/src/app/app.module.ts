@@ -56,7 +56,7 @@ import { MojProfilComponent } from './moj-profil/moj-profil.component';
       {path: 'login', component:LoginComponent},
       {path:'pocetna-kupac',component:PocetnaKupacComponent, canActivate:[AuthGuard]},
       {path: 'proizvodi', component: ProizvodiComponent, canActivate:[AuthGuard]},
-      {path: 'sign-up', component: SignUpComponent, canActivate:[AuthGuard]},
+      {path: 'sign-up', component: SignUpComponent},
       {path: 'onama', component: OnamaComponent, canActivate:[AuthGuard]},
       {path: 'pregled-proizvoda', component: PregledProizvodaComponent, canActivate:[AuthGuard]},
       {path: 'servisi', component: ServisiComponent, canActivate:[AuthGuard]},

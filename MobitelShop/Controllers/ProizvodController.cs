@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,8 @@ namespace MobitelShop.Controllers
 {
     [ApiController]
     [Route("[controller]/[action]")]
+    [Authorize]
+
     public class ProizvodController : ControllerBase
     {
         private readonly MojDbContext _dbContext;
